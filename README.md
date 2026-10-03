@@ -1,197 +1,168 @@
 # Mad Rooms — Generative Art
 
-[![Live Demo](https://img.shields.io/badge/demo-live-green?style=for-the-badge)](https://reyrove.github.io/Mad-Rooms-Generative-Art)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-
-> **Generative grid room art.** Each refresh creates a unique grid of layered rectangular rooms with random colors, offsets, and intricate patterns.
-
-## 🎨 Live Demo
-
-<div align="center">
-  <a href="https://reyrove.github.io/Mad-Rooms-Generative-Art" target="_blank">
-    <img src="demo-screenshot.jpg" alt="Mad Rooms Website Demo" width="800" style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.4);"/>
-  </a>
-  <br><br>
-  <a href="https://reyrove.github.io/Mad-Rooms-Generative-Art" target="_blank">
-    <img src="https://img.shields.io/badge/🌐_View_Live_Demo-0a0a0a?style=for-the-badge&logo=githubpages&logoColor=white&color=c9a84c" alt="View Live Demo" width="300"/>
-  </a>
-  <br>
-  <em>Click the image or button to experience the generative art</em>
-</div>
-
-## 👕 Apparel Preview
-
-<div align="center">
-  <img src="Mad-Rooms.jpg" alt="Mad Rooms on T-Shirt" width="600" style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);"/>
-  <br>
-  <em>Mad Rooms artwork printed on a T-shirt</em>
-</div>
-
-## ✨ Features
-
-- **Grid-Based** — 3×3 to 40×40 grid of rooms
-- **Layered Rectangles** — Each room contains 1-10 nested rectangles
-- **Rich Color Palettes** — 43 vibrant color combinations
-- **Dark Backgrounds** — 27 dark, moody background colors
-- **Random Offsets** — Organic, imperfect room shapes
-- **Glow Effects** — Soft shadow glow on each rectangle
-- **Seed-Based** — Every composition is unique and reproducible via its seed
-- **Save & Share** — Download as PNG with seed in filename
-- **Apparel Mode** — Preview artwork on a T-shirt mockup
-- **Responsive** — Works on desktop, tablet, and mobile
-- **Pure JavaScript** — No external dependencies
-- **Keyboard Shortcuts**:
-  - `R` — Regenerate
-  - `S` — Save image
-  - `T` — Toggle apparel view
-
-## 🎨 Artwork Details
-
-| Parameter | Range | Description |
-|-----------|-------|-------------|
-| **Grid Size** | 3×3 to 40×40 | Number of rooms |
-| **Layers per Room** | 1–10 | Nested rectangles |
-| **Background Colors** | 27 options | Dark, moody colors |
-| **Foreground Palettes** | 43 options | Vibrant color combinations |
-| **Shadow Blur** | Variable | Soft glow effect |
-
-## 🎯 How It Works
-
-The artwork creates a grid of "rooms" where each room contains nested rectangles:
-
-1. **Setup**:
-   - Random dark background color
-   - Random grid size (3-40 cells)
-   - Random foreground color palette
-
-2. **Room Generation**:
-   - Each cell becomes a "room"
-   - 1-10 nested rectangles per room
-   - Random offsets create organic, imperfect shapes
-   - Each rectangle gets a random color from the palette
-
-3. **Rendering**:
-   - Dark background
-   - Layered rectangles with glow effect
-   - Random color selection for each layer
-
-## 🚀 Quick Start
-
-### Local Development
-
-```bash
-# Clone the repository
-git clone https://github.com/reyrove/Mad-Rooms-Generative-Art.git
-
-# Navigate to the directory
-cd Mad-Rooms-Generative-Art
-
-# Open in browser
-open index.html
-# or use a live server
-```
-
-### Deploy to GitHub Pages
-
-1. Push to GitHub
-2. Go to Settings → Pages
-3. Select branch `main` and root folder
-4. Your site will be live at `https://reyrove.github.io/Mad-Rooms-Generative-Art`
-
-## 🧠 How It Works
-
-The artwork is generated using a deterministic random number generator, seeded by timestamp + random noise. Every refresh:
-
-1. **Setup**:
-   - Random dark background from 27 colors
-   - Random foreground palette from 43 options
-   - Random grid size (3-40 cells)
-
-2. **Room Generation**:
-   - Each cell in the grid becomes a room
-   - Each room has 1-10 nested rectangles
-   - Rectangles shrink inward with random offsets
-   - Each rectangle gets a random color from the palette
-
-3. **Rendering**:
-   - Dark background
-   - Glow effect on each rectangle
-   - Organic, imperfect shapes from random offsets
-
-## 📁 File Structure
-
-```
-Mad-Rooms-Generative-Art/
-├── index.html          # Main application (all-in-one)
-├── Mad-Rooms.jpg       # T-shirt mockup image
-├── fav.svg             # Favicon
-├── demo-screenshot.jpg # Website demo screenshot
-├── README.md           # This file
-└── LICENSE             # MIT License
-```
-
-## 🛠️ Tech Stack
-
-- **Pure Vanilla HTML/CSS/JS** — No dependencies
-- **Canvas API** — 2D rendering
-- **CSS Flexbox/Grid** — Responsive layout
-- **GitHub Pages** — Hosting
-
-## 🎯 Interactive Controls
-
-| Action | Keyboard | Button |
-|--------|----------|--------|
-| Regenerate | `R` | Click "regenerate" |
-| Save Image | `S` | Click "regenerate" |
-| Toggle Apparel | `T` | Click "apparel" |
-
-## 🎨 The Creative Process
-
-### Grid of Rooms
-The canvas is divided into a grid where each cell represents a "room." The grid size varies randomly, creating either dense, intricate patterns or sparse, elegant compositions.
-
-### Layered Rectangles
-Each room contains 1-10 nested rectangles that shrink inward. Random offsets create organic, imperfect shapes, making each room feel unique and hand-drawn.
-
-### Color Palettes
-43 carefully curated color palettes provide vibrant, harmonious color combinations. Each rectangle in a room gets a random color from the palette, creating rich, varied textures.
-
-### Glow Effect
-A soft shadow blur on each rectangle adds depth and dimension, making the rooms feel like they're glowing from within.
-
-## 📱 Responsive Design
-
-The application automatically adapts to:
-- Desktop screens
-- Tablets
-- Mobile phones
-- Landscape orientation
-- Various aspect ratios
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to:
-- Fork the repository
-- Create a feature branch
-- Submit a pull request
-
-### Ideas for Contributions:
-- New color palettes
-- Additional room shapes
-- Animation features
-- Interactive controls
-- Performance optimizations
-
-## 📄 License
-
-MIT License — see [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Inspired by architectural plans and room layouts
-- Pure JavaScript implementation
-- Special thanks to the creative coding community
+> A seed-based generative system for layered-grid compositions.  
+> A reproducible catalogue of computational room studies.
 
 ---
 
-**Built with ❤️ and mad rooms**
+## What is this?
+
+**Mad Rooms** is a generative design system that builds a grid — between three and forty columns, three and forty rows — and fills each cell with a stack of layered rectangles. Every rectangle is drawn with a seeded offset from its neighbours, traced with a glowing stroke, and tinted from a shared foreground palette. The result is a field of *rooms within rooms*: frames that repeat without ever aligning.
+
+Every artwork in this catalogue is defined by a single numeric seed. The same seed always produces the identical composition — making each piece **traceable, reproducible, and licensable** across textile, print, and apparel applications.
+
+Named for the sense of depth and enclosure that emerges from stacked, offset frames, **Mad Rooms** reframes the grid as architecture.
+
+---
+
+## Live
+
+🌐 **[View the catalogue →](https://reyrove.github.io/Mad-Rooms/)**
+
+---
+
+## The System
+
+The generator combines two layers:
+
+| Layer | Description |
+|-------|-------------|
+| **Grid** | A seeded columns × rows lattice, from 3×3 up to 40×40 cells. |
+| **Stacks** | Each cell contains 1 to 9 nested rectangles, each drawn with its own offset, colour, and glow. |
+
+Both layers are driven by the same seed, ensuring deterministic output.
+
+### Parameters
+
+- **Grid dimensions** — 3 to 40 columns × 3 to 40 rows
+- **Rooms** — one per cell (up to 1,600)
+- **Rectangles per room** — 1 to 9
+- **Offset range** — up to half the cell's smaller dimension
+- **Stroke glow** — `cellWidth / 10` shadow blur
+- **Background** — drawn from 27 curated dark tones
+- **Foreground palette** — drawn from 44 curated colour sets (2–8 colours each)
+
+---
+
+## Structure
+
+```
+Mad-Rooms/
+├── index.html              ← Full catalogue (single-file)
+├── images/
+│   ├── fav.svg
+│   ├── madrooms-tote.png
+│   ├── madrooms-cushion.png
+│   └── ...
+├── Mad-Rooms.jpg           ← Apparel mockup
+└── README.md
+```
+
+The entire project is contained in a single `index.html` — no build step, no dependencies, no framework. Open it in any modern browser.
+
+---
+
+## Features
+
+- **Seed-based generation** — every composition is deterministic and reproducible
+- **Live catalogue** — cover, statement, plate, surfaces, process, archive, commission sections
+- **Multiple surfaces** — print, scarf, textile, wallpaper — all rendered from the same seed
+- **Archive of 8 seeds** — click any plate to load it into the main view
+- **PNG export** — download any composition directly from the browser
+- **Keyboard shortcuts** — `R` for new seed, `S` to save
+- **Legal modal** — licensing, terms, and credits built in
+- **Responsive** — works on desktop, tablet, and mobile
+- **Mobile-first navbar** — horizontally scrollable with fade hint
+
+---
+
+## Usage
+
+### Generate a new composition
+
+Click **New Seed** or press `R`.
+
+### Download the current composition
+
+Click **Download** or press `S`.
+
+### Load a seed from the archive
+
+Click any plate in the **Archive** section.
+
+---
+
+## Color System
+
+Every composition is drawn from two curated palettes:
+
+- **Background** — one of 27 dark tones (blacks, deep blues, teals, muted reds, charcoals) chosen per seed
+- **Foreground** — one of 44 curated sets, each containing 2 to 8 harmonious or contrasting colours
+
+Each rectangle within a cell picks its stroke colour at random from the foreground set. Because the offsets and colours are both seeded, no two compositions share the same rhythm of line and hue.
+
+---
+
+## Technical Notes
+
+- Pure vanilla JavaScript — no libraries
+- Canvas 2D rendering
+- Custom xorshift random generator for deterministic seeds
+- Device-pixel-ratio aware rendering
+- Fully static rendering — one seed produces one composition, no animation loops
+- Single `renderStatic()` function drives the cover, plate, framed print, all four surfaces, and all eight archive thumbnails
+- Glow via `shadowColor` + `shadowBlur` per rectangle stroke
+- `prefers-reduced-motion` respected
+
+---
+
+## About
+
+**Mad Rooms** is a project by [Reyhaneh Daneshdoost](https://reyrove.github.io/) — an Iranian-born artist working at the intersection of classical textile logic and generative systems.
+
+The work begins with a simple observation: the woven surface — repetitive, mathematically structured, infinitely variable — has always been a form of computation, long before computers.
+
+**Mad Rooms** is an attempt to render that logic visible.
+
+> *A room is a frame — and a frame drawn inside itself never quite stays in place.*
+
+---
+
+## Licensing
+
+All compositions are seed-documented and available for licensing across textile, surface, and apparel applications.
+
+For commercial use, custom editions, or exclusive rights:
+
+📧 **reyhanehdaneshdoost@gmail.com**
+
+See the **Licensing** section in the live catalogue for details.
+
+---
+
+## Links
+
+- 🌐 [Website](https://reyrove.github.io/)
+- 📷 [Instagram](https://www.instagram.com/rey._.rove/)
+- 💼 [LinkedIn](https://www.linkedin.com/in/reyhaneh-daneshdoost-730481160/)
+- 🐦 [X](https://x.com/reyrove)
+
+---
+
+## Credits
+
+**Design & Generative System**  
+Reyhaneh Daneshdoost
+
+**Typefaces**  
+Cormorant Garamond · DM Mono
+
+**Edition**  
+Mad Rooms — Autumn 2026
+
+---
+
+<p align="center">
+  <em>Generative Layered Grid</em><br />
+  <sub>© Reyrove Studio · All compositions reproducible by seed</sub>
+</p>
